@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: prospectstx
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:application --bind 0.0.0.0:$PORT --workers 1 --threads 1 --timeout 120
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11
+      - key: ORBIT_V2_PUBLIC_URL
+        value: https://prospecstxx.netlify.app
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ORBIT_V2_BACKEND_URL
+        sync: false
