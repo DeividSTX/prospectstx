@@ -1,0 +1,74 @@
+{
+  "agency_name": "Minha agência",
+  "mode": "MANUAL",
+  "min_lead_score": 40,
+  "followup_days": [
+    3,
+    7
+  ],
+  "max_daily_actions": 30,
+  "require_approval": true,
+  "language": "pt-BR",
+  "tone": "consultivo",
+  "target_niches": [
+    "agencia_marketing"
+  ],
+  "excluded_niches": [],
+  "weights": {
+    "icp": 25,
+    "opportunity": 30,
+    "contact": 20,
+    "offer": 10,
+    "activity": 15
+  },
+  "icps": [
+    {
+      "name": "Captação",
+      "service": "LANDING_PAGE",
+      "signal": "no_landing",
+      "observation": "Foi registrada a ausência de página específica de captação.",
+      "hypothesis": "Uma página dedicada pode facilitar a apresentação da oferta e o próximo passo."
+    },
+    {
+      "name": "Site",
+      "service": "WEBSITE",
+      "signal": "outdated_site",
+      "observation": "Foi registrado que o site está desatualizado.",
+      "hypothesis": "Revisar o site pode melhorar a clareza da oferta."
+    },
+    {
+      "name": "Conteúdo",
+      "service": "CONTENT",
+      "signal": "no_cta",
+      "observation": "Foi registrada ausência de CTA no conteúdo analisado.",
+      "hypothesis": "Conteúdo com próximo passo claro pode facilitar novos contatos."
+    },
+    {
+      "name": "Atendimento",
+      "service": "AI_ATTENDANT",
+      "signal": "repetitive_questions",
+      "observation": "Foram registradas perguntas repetitivas no atendimento.",
+      "hypothesis": "Um assistente pode ajudar a responder dúvidas recorrentes."
+    },
+    {
+      "name": "Automação",
+      "service": "AUTOMATION",
+      "signal": "manual_scheduling",
+      "observation": "Foi registrado agendamento manual.",
+      "hypothesis": "Automatizar etapas de agendamento pode reduzir tarefas repetitivas."
+    }
+  ],
+  "automatic_inbox": {
+    "enabled": true,
+    "agency": "Agência Santx",
+    "services": "Sites, landing pages e posts estratégicos",
+    "question": "Você procura um site, uma landing page ou posts estratégicos para o seu negócio?",
+    "handoff": "Vou encaminhar sua solicitação para a equipe da Agência Santx para explicar o funcionamento e os valores. O atendimento humano responderá assim que estiver disponível.",
+    "per_contact_limit": 5,
+    "interval_seconds": 60
+  },
+  "prospecting_schedule": {
+    "enabled": true,
+    "city": "Manaus"
+  }
+}
